@@ -1,0 +1,19 @@
+/* ============================================================================
+   Block 2 styles
+*/
+
+.block-2 {
+  background-color: $block-2-bg-color;
+  padding: 30px;
+  margin-top: 15px;
+  display: flex;
+  column-gap: 30px;
+  flex-wrap: nowrap;
+}
+
+.block-2__item {
+  background-color: $block-2__item-bg-color;
+  flex: 1;
+  aspect-ratio: 255 / 199;
+  flex-basis: 255px;
+}

@@ -1,0 +1,91 @@
+/* ============================================================================
+   Block 1 styles
+
+   Разметка с использованием Grid system 
+*/
+
+.block-1 {
+  margin-top: 15px;
+  background-color: $block-1-bg-color;
+  display: grid;
+  grid-template-columns: 2.4375fr 3.6875fr 1fr;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+}
+
+.block-1__item {
+  min-height: 198px;
+  background-color: $block-1__item-bg-color;
+}
+
+.block-1__item--4 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+/*  Разметка с использованием Flexbox
+
+.block-1 {
+  margin-top: 15px;
+  background-color: $block-1-bg-color;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 15px;
+  justify-content: space-between;
+}
+
+.block-1__item {
+  min-height: 198px;
+  background-color: $block-1__item-bg-color;
+}
+
+.block-1__item--1 {
+  flex-basis: 33.33%;
+}
+.block-1__item--2 {
+  min-width: 45%;
+  flex: 1;
+}
+.block-1__item--3 {
+  flex-basis: 13.67%;
+  // flex: 1;
+}
+.block-1__item--4 {
+  min-width: 80%;
+  flex: 8;
+}
+.block-1__item--5 {
+  flex-basis: 13.67%;
+}
+*/
+
+// Нумерация блоков псевдообъектами
+
+.block-1__item--1::after,
+.block-1__item--2::after,
+.block-1__item--3::after,
+.block-1__item--4::after,
+.block-1__item--5::after {
+  display: block;
+  width: 100%;
+  margin-top: 68px;
+  text-align: center;
+  font-size: 3.3125rem;
+  color: white;
+}
+
+.block-1__item--1::after {
+  content: "1";
+}
+.block-1__item--2::after {
+  content: "2";
+}
+.block-1__item--3::after {
+  content: "3";
+}
+.block-1__item--4::after {
+  content: "4";
+}
+.block-1__item--5::after {
+  content: "5";
+}

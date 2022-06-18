@@ -1,0 +1,355 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ============================================================================
+   Common styles
+*/
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+.wrap {
+  max-width: 1170px;
+  min-height: 100vh;
+  background-color: #c0dbd9;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 15px;
+}
+
+.main {
+  width: 100%;
+}
+
+.btn {
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: #a5c7f9;
+  color: white;
+  text-decoration: none;
+  font-size: 1.25rem;
+  color: white;
+  text-decoration: none;
+}
+
+.btn:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+  box-shadow: none;
+}
+
+/* ============================================================================
+   Header styles
+*/
+.header {
+  background-color: #7faff6;
+  padding: 30px;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+/* ============================================================================
+   Pop up styles
+*/
+.pop-up {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: opacity 300ms ease-in;
+  pointer-events: none;
+}
+
+.pop-up:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.pop-up__box {
+  height: 400px;
+  width: 400px;
+  background-color: white;
+  margin: 10% auto;
+  position: relative;
+}
+
+.pop-up-box__btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.pop-up-box__title {
+  display: inline-block;
+  width: 100%;
+  font-size: 3.3125rem;
+  text-align: center;
+  margin-top: 169px;
+}
+
+/* ============================================================================
+   Block 1 styles
+
+   Разметка с использованием Grid system 
+*/
+.block-1 {
+  margin-top: 15px;
+  background-color: #b3f95a;
+  display: grid;
+  grid-template-columns: 2.4375fr 3.6875fr 1fr;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+}
+
+.block-1__item {
+  min-height: 198px;
+  background-color: #8ad191;
+}
+
+.block-1__item--4 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+/*  Разметка с использованием Flexbox
+
+.block-1 {
+  margin-top: 15px;
+  background-color: $block-1-bg-color;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 15px;
+  justify-content: space-between;
+}
+
+.block-1__item {
+  min-height: 198px;
+  background-color: $block-1__item-bg-color;
+}
+
+.block-1__item--1 {
+  flex-basis: 33.33%;
+}
+.block-1__item--2 {
+  min-width: 45%;
+  flex: 1;
+}
+.block-1__item--3 {
+  flex-basis: 13.67%;
+  // flex: 1;
+}
+.block-1__item--4 {
+  min-width: 80%;
+  flex: 8;
+}
+.block-1__item--5 {
+  flex-basis: 13.67%;
+}
+*/
+.block-1__item--1::after,
+.block-1__item--2::after,
+.block-1__item--3::after,
+.block-1__item--4::after,
+.block-1__item--5::after {
+  display: block;
+  width: 100%;
+  margin-top: 68px;
+  text-align: center;
+  font-size: 3.3125rem;
+  color: white;
+}
+
+.block-1__item--1::after {
+  content: "1";
+}
+
+.block-1__item--2::after {
+  content: "2";
+}
+
+.block-1__item--3::after {
+  content: "3";
+}
+
+.block-1__item--4::after {
+  content: "4";
+}
+
+.block-1__item--5::after {
+  content: "5";
+}
+
+/* ============================================================================
+   Block 2 styles
+*/
+.block-2 {
+  background-color: #88b5bf;
+  padding: 30px;
+  margin-top: 15px;
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  flex-wrap: nowrap;
+}
+
+.block-2__item {
+  background-color: #0d89b0;
+  flex: 1;
+  aspect-ratio: 255/199;
+  flex-basis: 255px;
+}
+
+/* ============================================================================
+   Footer styles
+*/
+.footer {
+  background-color: #7faff6;
+  margin-top: 100px;
+  align-self: flex-end;
+  height: 100px;
+  width: 100%;
+}
